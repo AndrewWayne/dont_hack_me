@@ -13,5 +13,6 @@
 #include <ctime>
 #include <algorithm>
 #include <string>
+#include <stack>
 using namespace std;
 #endif /* Header_h */
