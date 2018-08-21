@@ -14,5 +14,6 @@
 #include <algorithm>
 #include <string>
 #include <stack>
+#include <vector>
 using namespace std;
 #endif /* Header_h */

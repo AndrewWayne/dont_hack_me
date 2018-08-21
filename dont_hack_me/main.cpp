@@ -12,6 +12,7 @@ char pathout[100];
 string temp;
 stack<string> have;
 stack<string> func;
+vector<string> code;
 string rand_str()
 {
     string str="              ";
@@ -34,14 +35,14 @@ string rand_str()
     return str;
 }
 int main(int argc, const char * argv []) {
-    srand(time(NULL));
+    srand((unsigned)time(NULL));
     printf("Pls input the source file path:");
     cin>>inpath;
     printf("\n");
     printf("Pls input the target file path:");
     cin>>outpath;
-//    freopen(inpath,"r",stdin);
-//    freopen(outpath,"w",stdout);
+    freopen(inpath,"r",stdin);
+    freopen(outpath,"w",stdout);
     while(cin>>temp)
     {
         if(temp[0]=='#'){
@@ -52,14 +53,16 @@ int main(int argc, const char * argv []) {
         }
         have.push(temp);
         func.push(rand_str());
-        cout<<func.top()<<endl;
+        code.push_back(func.top());
     }
-    printf("\n");
     while(!have.empty()){
         cout<<"#define "<<func.top()<<" "<<have.top()<<endl;
         func.pop();
         have.pop();
     }
+    printf("\n");
+    for (auto it = code.begin(); it != code.end(); it ++)
+        cout<<*it<<endl;
     cerr<<"Probably Succeed!"<<endl;
     return 0;
 }
