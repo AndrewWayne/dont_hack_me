@@ -40,11 +40,13 @@ int main(int argc, const char * argv []) {
     printf("\n");
     printf("Pls input the target file path:");
     cin>>outpath;
-    freopen(inpath,"r",stdin);
-    freopen(outpath,"w",stdout);
+//    freopen(inpath,"r",stdin);
+//    freopen(outpath,"w",stdout);
     while(cin>>temp)
     {
         if(temp[0]=='#'){
+            cout<<temp<<' ';
+            getline(cin,temp);
             cout<<temp<<endl;
             continue;
         }
