@@ -8,12 +8,5 @@
 
 #ifndef Header_h
 #define Header_h
-#include <iostream>
-#include <cstdio>
-#include <ctime>
-#include <algorithm>
-#include <string>
-#include <stack>
-#include <vector>
-using namespace std;
+
 #endif /* Header_h */
